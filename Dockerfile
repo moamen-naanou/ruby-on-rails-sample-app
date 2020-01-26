@@ -5,6 +5,8 @@ RUN apt-get update && \
     apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
 
+RUN gem install bundler -v 1.17.3
+
 
 # throw errors if Gemfile has been modified since Gemfile.lock
 RUN bundle config --global frozen 1
